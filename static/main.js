@@ -69,7 +69,7 @@ window.addEventListener('load', () =>
   {
     hoge=1
     var gousei=JSON.stringify({"name":hoge})
-    const BASE_URL = "https://show-me-your-drawing.herokuapp.com/";
+    const BASE_URL = "http://127.0.0.1:5000";
     $.ajax({
       //画像処理サーバーに返す場合
       
@@ -119,7 +119,7 @@ window.addEventListener('load', () =>
 
     var fData = new FormData();
     fData.append('img', base64);
-    const BASE_URL = "https://show-me-your-drawing.herokuapp.com/";
+    const BASE_URL = "http://127.0.0.1:5000";
     $.ajax({
       //画像処理サーバーに返す場合
 
