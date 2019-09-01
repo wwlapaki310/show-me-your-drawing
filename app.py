@@ -11,6 +11,7 @@ import base64
 from pathlib import Path
 from io import BytesIO
 import numpy as np
+import os
 
 app = Flask(__name__)
 
@@ -29,6 +30,7 @@ def index():
             return "img_capture"
         except:
             gousei=request.json["name"]
+            os.remove('static/img/drawing.gif')
             images=[]
             print(gousei)
             for i in range(count):
@@ -38,11 +40,12 @@ def index():
                 for x in img:
                     tmp = []
                     for y in x:
-                        tmp.append(255 - y[3]) # Aの値を抽出して白黒反転
+                        tmp.append(255 - y[3])
                     img_prop.append(tmp)
                 img_prop = np.array(img_prop).astype("uint8")
                 pilImg = Image.fromarray(np.uint8(img_prop))
                 images.append(pilImg)
+                os.remove('static/img/image'+str(i)+'.png')
             images[0].save('static/img/drawing.gif',save_all=True, append_images=images[1:], duration=500, loop=0)
             count=0
             return render_template('result.html',message='Hello')
