@@ -119,7 +119,7 @@ window.addEventListener('load', () =>
 
     var fData = new FormData();
     fData.append('img', base64);
-    const BASE_URL = "http://127.0.0.1:5000";
+    const BASE_URL = "https://show-me-your-drawing.herokuapp.com/";
     $.ajax({
       //画像処理サーバーに返す場合
 
