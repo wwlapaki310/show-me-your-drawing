@@ -1,0 +1,87 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>show me your drawing</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicons -->
+  <link href="static/favicon.png" rel="icon">
+  <link href="static/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="static/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Template Name: Flatty
+    Template URL: https://templatemag.com/flatty-bootstrap-app-landing-page-template/
+    Author: TemplateMag.com
+    License: https://templatemag.com/license/
+  ======================================================= -->
+</head>
+<body>
+  <div class="container">
+    <div class="row mt centered">
+      <div class="col-lg-6 col-lg-offset-3">
+        <a href=""><img src="/static/logo.png" class="img-responsive"  alt="index.html"></a>
+          <p>絵を描いた過程を共有するアプリです．</p>
+          <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="show_me_your_drawing">
+          <meta property="og:image" content='static/img/drawing.gif'>Tweet</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row mt centered">
+      <div class="col-lg-6 col-lg-offset-3">
+        <canvas
+          id="draw-area"
+          width="400px"
+          height="400px"
+          style="border: 1px solid #000000;">
+        </canvas>
+              
+        <div>
+          <button id="clear-button">全消し</button>
+        </div>
+              
+        <div>
+          <button id="make-button">動画作成</button>
+        </div>
+
+        <img id="output" src="">
+      </div>
+    </div>
+  </div>
+
+  
+
+
+  <!-- / copyrights -->
+
+  <!-- JavaScript Libraries -->
+  <script src="static/jquery/jquery.min.js"></script>
+  <script src="static/bootstrap/js/bootstrap.min.js"></script>
+  <script src="static/easing/easing.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="static/main.js"></script>
+
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+</body>
+</html>
+
+
