@@ -34,7 +34,6 @@ def index():
             for i in range(count):
                 img=Image.open('static/img/image'+str(i)+'.png')
                 img=np.asarray(img)
-                #img=cv2.imread('img/image'+str(i)+'.png')
                 img_prop = []
                 for x in img:
                     tmp = []
@@ -45,6 +44,7 @@ def index():
                 pilImg = Image.fromarray(np.uint8(img_prop))
                 images.append(pilImg)
             images[0].save('static/img/drawing.gif',save_all=True, append_images=images[1:], duration=500, loop=0)
+            count=0
             return render_template('result.html',message='Hello')
     else:
         return render_template('index.html',message='Hello')
