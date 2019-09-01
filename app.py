@@ -4,7 +4,6 @@ from flask import request
 from PIL import Image
 from PIL import ImageDraw, ImageFont
 from collections import namedtuple
-import cv2
 import math
 from requests_oauthlib import OAuth1Session
 import json
